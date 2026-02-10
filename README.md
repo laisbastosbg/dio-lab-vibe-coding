@@ -1,89 +1,151 @@
-# 💸 App de Organização de Finanças Pessoais com Vibe Coding
+# 💸 App de Organização de Tarefas e Cronograma com Vibe Coding
 
-Aprenda a **criar soluções com IA** de forma criativa, guiando ferramentas como o **Copilot** e o **Lovable** com uma comunicação simples e natural. O foco é desenvolver o conceito de um **App de Organização de Finanças Pessoais**, mas, acima de tudo, aprender o **jeito Vibe de programar com IA**.
-
-## ✨ O que é Vibe Coding
-
-**Vibe Coding** é uma forma leve e criativa de desenvolver com IA, baseada em **conversas naturais e bem estruturadas**. Você não precisa escrever código linha por linha. Em vez disso, aprende a **guiar a IA** descrevendo suas ideias de forma clara, com **intenção e contexto**. Em outras palavras:
-
-> Você mostra a vibe da sua ideia e a IA transforma em solução (ou em um caminho para ela).
-
-## 🎯 Desafio
-
-Problema: Muitas pessoas não conseguem manter um controle financeiro porque os aplicativos exigem muita entrada de dados manual, e a criação de orçamentos é vista como algo tedioso. 
-
-Precisamos de uma solução que permita **controlar as finanças por meio de uma conversa simples**, com **agentes de IA** capazes de criar **planos de economia personalizados e automatizados**. Você deve utilizar as ideias de **Vibe Coding** e **MVP (Produto Mínimo Viável)** para desenvolver o **conceito de um aplicativo** que resolva o problema citado.
-
-> [!IMPORTANT]
-> Você **não precisa construir o código**! O foco está em **usar a IA como sua parceira criativa**, transformando boas ideias e prompts em conceitos funcionais que simulam um produto real.
-
-## 🪄 Etapas do Desafio
-
-### 1. Saber o que Pedir é a Chave! Otimize seus Prompts!
-
-Antes de pedir para a IA "criar um app", é importante definir com clareza o que você quer construir e por quê. Para isso, você vai criar um **PRD (Product Requirements Document)** simplificado, uma especificação que serve como _briefing_ para a IA entender sua ideia.
-
-Um bom PRD deve descrever o problema, quem será beneficiado, as principais funcionalidades e o que você espera que a IA entregue. Use o modelo abaixo como ponto de partida e adapte conforme o seu estilo:
+## Product Requirements Document
 
 ```txt
-# Contexto
-Quero criar um aplicativo de Organização de Finanças Pessoais que funcione por meio de conversas com o usuário.  
-A ideia é facilitar o controle financeiro de forma simples e natural, sem formulários manuais ou planilhas complexas.
+## Assistente de tarefas
 
-# Problema
-Muitas pessoas desistem de controlar seus gastos porque os apps atuais exigem muita entrada manual e pouca personalização.  
-Quero resolver isso com uma experiência de conversa e recomendações automáticas de economia.
+### Contexto
 
-# Público-Alvo
-Pessoas que querem começar a organizar suas finanças de forma prática e sem complicação, principalmente iniciantes.
+Quero criar um aplicativo que gera automaticamente um cronograma visual em formato de calendário a partir de conversas naturais com o usuário.
 
-# Funcionalidades-Chave
-1. Registrar gastos via chat em linguagem natural.  
-2. Classificar automaticamente as transações.  
-3. Definir e acompanhar metas financeiras.  
-4. Receber dicas de economia do “Agente Financeiro”.  
-5. Visualizar relatórios simples e personalizados.
+O usuário pode escrever ou falar de forma livre tudo o que precisa ou quer fazer — sem se preocupar com estrutura, prioridade ou clareza — e o sistema transforma isso em uma agenda organizada por dias, semanas ou meses.
 
-# Entregável da IA
-Gerar um plano de MVP com as principais telas, recursos necessários e um esboço de validação inicial.  
-Usar tom educativo e linguagem acessível, em português.
+---
+
+### Problema
+
+Muitas pessoas sofrem com disfunção executiva, TDAH ou sobrecarga mental, o que dificulta:
+
+* Organizar tarefas
+* Definir prioridades
+* Transformar intenções vagas em planos concretos
+
+Ferramentas tradicionais exigem estrutura, disciplina e clareza logo no início — exatamente o que esse público mais tem dificuldade de fornecer.
+
+---
+
+### Objetivo do Produto
+
+Permitir que o usuário **despeje seus pensamentos de forma caótica** e receba como retorno:
+
+* Um cronograma organizado
+* Tarefas distribuídas no tempo
+* Uma visão clara do que fazer agora, depois e mais tarde
+
+---
+
+### Público-alvo (MVP)
+
+Pessoa adulta, familiarizada com tecnologia, que:
+
+* Se sente sobrecarregada com tarefas do dia a dia
+* Já tentou usar apps de lista ou agenda, mas abandonou
+* Prefere explicar as coisas “conversando” em vez de preencher formulários
+
+*(Ex: pessoas com TDAH, freelancers, estudantes, pessoas em burnout leve)*
+
+---
+
+### Proposta de Valor
+
+> “Fale tudo o que você precisa fazer. Eu organizo.”
+
+---
+
+### Funcionalidades-Chave (priorizadas)
+
+#### Essenciais (MVP)
+
+1. **Entrada via chat em linguagem natural**
+
+   * Texto livre, sem formato obrigatório
+
+2. **Interpretação e extração de tarefas**
+
+   * Identificar:
+
+     * O que é tarefa
+     * Prazo ou período (se existir)
+     * Tipo de atividade (trabalho, pessoal, estudo, saúde etc.)
+
+3. **Geração automática de agenda**
+
+   * Visual em calendário (dia / semana)
+   * Tarefas distribuídas de forma razoável no tempo
+
+4. **Edição simples**
+
+   * Marcar tarefa como feita
+   * Ajustar dia ou horário manualmente
+
+---
+
+## 3. Plano de MVP
+
+### 3.1 Principais telas
+
+#### 1. Tela de Chat (tela principal)
+
+**Função:** onde tudo começa
+
+* Campo de texto grande e acolhedor
+
+* Placeholder tipo:
+
+  > “Me conta tudo o que você precisa fazer, sem se preocupar em organizar”
+
+* Respostas da IA:
+
+  * Confirmações simples
+  * Perguntas pontuais quando algo estiver ambíguo
+
+📌 **Momento mágico aqui**:
+Usuário escreve um texto caótico → clica em “Organizar” → vê a agenda surgir.
+
+---
+
+#### 2. Tela de Agenda (Calendário)
+
+**Função:** visualização da ordem criada
+
+* Visão semanal (default)
+* Tarefas coloridas por tipo
+* Indicador simples de carga do dia (leve / médio / pesado)
+
+Ações:
+
+* Marcar como concluída
+* Arrastar para outro dia
+* Abrir detalhes da tarefa
+
+---
+
+#### 3. Tela de Detalhe da Tarefa (simples)
+
+* Nome da tarefa
+* Data / período
+* Tipo
+* Status (pendente / feito)
+
+Nada complexo no MVP.
+
+---
+
+### 3.2 Recursos técnicos essenciais
+
+* **IA de linguagem natural**
+
+  * Extração de tarefas
+  * Interpretação de tempo (“essa semana”, “até sexta”, “algum dia”)
+
+* **Lógica de distribuição**
+
+  * Evitar sobrecarregar um único dia
+  * Se prazo for vago, sugerir e permitir ajuste
+
+* **Persistência básica**
+
+  * Salvar tarefas e status
+
 ```
-
-Depois de preencher o modelo, use o Copilot Web para revisar e melhorar o seu prompt antes de ir ao Lovable. A ideia é lapidar o texto até que ele fique claro, direto e reflita exatamente a sua intenção.
-
-> [!TIP]
-> Pense no PRD/Prompt como “o briefing que a IA precisa para entender sua vibe”. Portanto, quanto mais claro e intencional for o texto, mais próximas do ideal serão as respostas da IA.
-
-### 2. Explorando o Lovable na Prática
-
-Com seu PRD pronto e revisado, é hora de colocar a IA em ação. Abra o Lovable, cole seu prompt completo e peça o plano inicial do MVP do seu aplicativo. Como o plano gratuito limita você a 5 interações por dia, seja estratégico:
-- Faça perguntas diretas e construtivas, como “crie o fluxo de telas com base nas funcionalidades listadas” ou “gere uma versão resumida do plano de MVP”;
-- Priorize clareza nas instruções para aproveitar ao máximo cada resposta;
-
-Durante essa etapa, você pode orientar a IA para três entregas principais:
-1. Agente Financeiro: defina o comportamento e o tom de voz de um consultor financeiro pessoal, alinhado ao público e objetivo do app.
-2. Fluxo de Telas: peça à IA para gerar o fluxo conceitual de telas com base nas funcionalidades descritas no PRD, simulando a interação por conversa.
-3. Plano de MVP: solicite um resumo das 5 funcionalidades principais, dos recursos necessários e um plano de validação inicial (como medir se o app cumpre seu propósito).
-
-> [!TIP]
-> Se preferir, você pode fazer tudo com o **Copilot**. O importante é exercitar a habilidade de transformar intenções em instruções claras e testar os limites da IA como parceira criativa.
-
-### 3. Entregando o Desafio na DIO
-
-Finalize seu projeto criando um **repositório no GitHub** (pode ser um **fork** deste).  
-No README do seu repositório, inclua:
-
-- Seu **prompt final** (PRD);  
-- Prints ou pequenos vídeos das interações com a IA;  
-- Um resumo do que o seu **App de Finanças Pessoais** faz;  
-- Uma breve **reflexão sobre o processo**:
-  - O que funcionou bem?  
-  - O que não funcionou como o esperado?  
-  - O que aprendeu sobre conversar com IAs?
-
-> [!TIP]
-> Publique seu repositório e compartilhe o link na plataforma da DIO! Sua entrega é a prova de que você domina o raciocínio de Vibe Coding, mesmo sem escrever uma única linha de código.
-
-## 💬 Conclusão
-
-Vibe Coding é sobre clareza, curiosidade e criatividade, não sobre perfeição técnica. O verdadeiro objetivo aqui é aprender a pensar junto com a IA, transformando ideias em conceitos reais e enxergando a tecnologia como uma extensão do seu raciocínio criativo. Cada interação é um experimento, quanto mais clara for sua intenção, mais surpreendente será o resultado.
